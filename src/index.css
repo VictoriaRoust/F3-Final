@@ -1,0 +1,426 @@
+:root {
+  --primary-color: #d3d3d3;
+  --secondary-color: #e9ddff;
+  --text-color: #000000;
+  --card-color: #f7f2fa;
+  --accent-color: #006b5f;
+  --dark-background: #1c1b1f;
+  --semidark-background: #2e2d32;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fffbff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+nav img {
+  height: 45px;
+  filter: invert(50%);
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.center-row {
+  justify-content: center;
+}
+
+.between-row {
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-start {
+  align-items: flex-start;
+}
+
+a:hover {
+  color: rgb(136, 136, 136);
+}
+
+.toggle-container {
+  width: 200px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TITULO */
+
+#title {
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  padding: 20px;
+  text-align: center;
+}
+/* CARDS */
+.card h1 {
+  text-align: center;
+  margin: 0;
+  font-size: xx-large;
+  padding-bottom: 10px;
+}
+
+.favButton {
+  background-color: #e9ddff;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  background-color: #f7f2fa;
+  border-radius: 5px;
+  position: relative;
+  white-space: normal;
+}
+
+.card p {
+  display: none;
+}
+
+.card h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  margin-top: 15px;
+  font-size: 15px;
+  top: 5px;
+  padding-right: 20px;
+  align-self: end;
+  font-style: italic;
+  display: none;
+}
+
+.card h4 {
+  margin: 0;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.card a {
+  margin: 0;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #1c1b1e;
+}
+
+.card img {
+  border-image: round;
+  border-radius: 10px;
+  width: 90%;
+  align-self: center;
+  margin-top: 5%;
+}
+
+div.card:hover {
+  border: 5px #000;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 90vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* DETAIL */
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.detail-id {
+  display: none;
+}
+
+.detail-container {
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 30rem;
+  background-color: #f7f2fa;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  background-color: #f7f2fa;
+  border-radius: 25px;
+  align-self: center;
+  position: relative;
+}
+
+.detail-container img {
+  border-image: round;
+  border-radius: 100%;
+  width: 50%;
+  align-self: center;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 35rem;
+  border-radius: 25px;
+  margin: 0 auto; /* Agregado para centrar horizontalmente */
+  position: relative;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 4rem;
+  margin: 0;
+  padding-top: 1.7rem;
+  background: linear-gradient(to right, black);
+  background-clip: text;
+}
+
+.contact-container p {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
+/* FORMULARIO */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #f7f2fa;
+  border-radius: 25px;
+}
+
+form label {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-content{
+  margin-bottom: 20px;
+  border-style: none;
+  height: 40px;
+  border-radius: 15px;
+  width: 220px;
+  align-self: center;
+}
+
+form button {
+  margin-top: 20px;
+}
+
+button {
+  align-self: center;
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 15px;
+  background-color: lightgray;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+input[type="text"] {
+  text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+p.warning {
+  font-size: 16px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: 2rem;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+footer > img {
+  max-width: 200px;
+  padding: "0.8rem";
+  margin: 0;
+}
+footer > p {
+  margin: 0;
+  padding-top: 0.7rem;
+}
+
+/* FAVS */
+
+
+.favs p {
+  text-align: center;
+  align-self: center;
+}
+
+/*DARK MODE*/
+
+.dark {
+  background-color: #1c1b1f;
+}
+
+.dark body {
+  background-color: #1c1b1f;
+}
+.dark footer {
+  background-color: #1c1b1f;
+}
+
+.dark nav{
+  background-color: BLACK;
+}
+
+.dark a {
+  color: var(--secondary-color);
+}
+
+.dark h1 {
+  color: var(--secondary-color);
+}
+
+.dark h4 {
+  color: var(--secondary-color);
+}
+.dark h2 {
+  color: var(--secondary-color);
+}
+
+.dark form{
+    background-color: #1c1b1f;
+}
+.dark form label{
+ color: white;
+}
+
+.dark p {
+  text-align: center;
+  align-self: center;
+  color: white;
+}
+
+.dark #detail-link {
+  color: var(--primary-color);
+}
+
+.dark #h1 {
+  color: var(--secondary-color);
+}
+
+.dark .card {
+  background-color: #26242a;
+}
+
+.dark footer img {
+  filter: invert(50%);
+}
+.dark .detail-container{
+  background-color: black;
+}
+
+.dark .detail-info{
+ color: white;
+}
